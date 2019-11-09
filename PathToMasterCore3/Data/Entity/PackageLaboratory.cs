@@ -10,13 +10,13 @@ namespace PathToTheMaster.Web.Data.Entity
     public class PackageLaboratory
     {
         [Key]
-        public int AnalysisId { get; set; }
+        public int PackageId { get; set; }
 
         [Key]
         public int LaboratoryId { get; set; }
 
-        [ForeignKey(nameof(AnalysisId))]
-        public virtual Analysis Analysis { get; set; }
+        [ForeignKey(nameof(PackageId))]
+        public virtual Package Package { get; set; }
 
         [ForeignKey(nameof(LaboratoryId))]
         public virtual Laboratory Laboratory { get; set; }

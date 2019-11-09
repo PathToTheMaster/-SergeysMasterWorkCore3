@@ -12,9 +12,7 @@ namespace PathToTheMaster.Web.Data.Entity
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-        public int CityId { get; set; }
-
-        [ForeignKey(nameof(CityId))]
-        public virtual City City { get; set; }
+        public decimal Latitude  { get; set; }
+        public decimal Longitude { get; set; }
     }
 }

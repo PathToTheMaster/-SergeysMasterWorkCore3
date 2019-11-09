@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PathToMasterCore3.Data.Entity;
 using PathToTheMaster.Web.Data.Entity;
 using System;
 using System.Collections.Generic;
@@ -24,13 +25,13 @@ namespace PathToTheMaster.Web.Data
 
         public DbSet<Laboratory> Laboratory { get; set; }
 
-        public DbSet<Group> Group { get; set; }
+        public DbSet<PackageLaboratory> PackageLaboratory { get; set; }
 
-        public DbSet<City> City { get; set; }
+        public DbSet<Assistant> Assistant { get; set; }
 
-        public DbSet<AnalysisNorm> AnalysisNorm { get; set; }
+        public DbSet<Norm> Norm { get; set; }
 
-        public DbSet<Analysis> Analysis { get; set; }
+        public DbSet<Package> Analysis { get; set; }
 
         public DbSet<Addresses> Addresses { get; set; }
     }

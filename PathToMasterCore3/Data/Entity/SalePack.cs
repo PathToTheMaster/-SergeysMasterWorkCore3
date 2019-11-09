@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PathToMasterCore3.Data.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -16,11 +17,18 @@ namespace PathToTheMaster.Web.Data.Entity
 
         public int PatientId { get; set; }
 
+        public int AssistantId { get; set; }
+
         [ForeignKey(nameof(PackageId))]
         public virtual Package Package { get; set; }
 
         [ForeignKey(nameof(PatientId))]
         public virtual Patient Patient { get; set; }
+
+        [ForeignKey(nameof(AssistantId))]
+        public virtual Assistant Assistant { get; set; }
+
+        
 
     }
 }
