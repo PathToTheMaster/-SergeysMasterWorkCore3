@@ -6,15 +6,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PathToTheMaster.Web.Data
+namespace PathToMasterCore3.Data
 {
-    public class DatabaseContext:DbContext
+    public class DatabaseContext : DbContext
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options)
             : base(options)
         {
+            //створення бази даних
             Database.EnsureCreated();
-            Database.Migrate();
         }
 
         public DbSet<Patient> Patient { get; set; }
@@ -34,5 +34,12 @@ namespace PathToTheMaster.Web.Data
         public DbSet<Package> Analysis { get; set; }
 
         public DbSet<Addresses> Addresses { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //Для створення звязків N до M
+            modelBuilder.Entity<PackageLaboratory>()
+                .HasKey(c => new { c.PackageId, c.LaboratoryId });
+        }
     }
 }

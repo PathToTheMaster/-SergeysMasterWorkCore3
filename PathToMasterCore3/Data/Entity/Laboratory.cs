@@ -12,6 +12,7 @@ namespace PathToTheMaster.Web.Data.Entity
         [Key]
         public int Id { get; set; }
 
+        public string Name { get; set; }
         public int AddressesId { get; set; }
 
         [ForeignKey(nameof(AddressesId))]

@@ -11,14 +11,11 @@ namespace PathToTheMaster.Web.Data.Entity
     {
         [Key]
         public int Id { get; set; }
-        public string Name { get; set; }
         public int NormId { get; set; }
         public int GroupId { get; set; }
 
         [ForeignKey(nameof(NormId))]
         public  virtual Norm Norm { get; set; }
 
-        [ForeignKey(nameof(GroupId))]
-        public virtual Group Group { get; set; }
     }
 }
