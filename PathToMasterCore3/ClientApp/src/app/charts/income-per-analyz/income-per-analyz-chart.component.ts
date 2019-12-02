@@ -11,10 +11,10 @@ export class CharIncomePerAnalyzComponent implements OnInit {
 			theme: "light2",
 			animationEnabled: true,
 			title: {
-				text: "Квартальний дохід по аналізу"
+				text: "Місячний дохід по аналізу"
 			},
 			subtitles: [{
-				
+
 				fontSize: 16
 			}],
 			data: [{
@@ -24,10 +24,18 @@ export class CharIncomePerAnalyzComponent implements OnInit {
 				indexLabel: "{label} - {y}",
 				yValueFormatString: "###0\"₴\"",
 				dataPoints: [
-					{ y: 18000, label: "Зима" },
-					{ y: 25000, label: "Весна"},
-					{ y: 22000, label: "Літо" },
-					{ y: 20000, label: "Осінь" },
+					{ y: 21200, label: "Січень", exploded: true },
+					{ y: 24000, label: "Лютий" , exploded: true},
+					{ y: 22000, label: "Березень", exploded: true},
+					{ y: 25230, label: "Квітень", exploded: true },
+					{ y: 22120, label: "Травень", exploded: true },
+					{ y: 23600, label: "Червень", exploded: true },
+					{ y: 24560, label: "Липень" , exploded: true},
+					{ y: 23650, label: "Серпень" , exploded: true},
+					{ y: 22330, label: "Вересень" , exploded: true},
+					{ y: 21290, label: "Жовтень", exploded: true },
+					{ y: 21220, label: "Листопад", exploded: true},
+					{ y: 23210, label: "Грудень", exploded: true }
 				]
 			}]
 		});

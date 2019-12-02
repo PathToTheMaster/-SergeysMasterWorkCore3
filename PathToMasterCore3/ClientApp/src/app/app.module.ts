@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -14,6 +14,8 @@ import { CharPerFilialComponent } from './charts/per-filial/per-filial-chart.com
 import { CharPopularAnalyzesComponent } from './charts/popular-analyzes/popular-analyzes-chart.component';
 import { CharPerAnalyzesComponent } from './charts/per-analyz/per-analyz-chart.component';
 import { CharIncomePerAnalyzComponent } from './charts/income-per-analyz/income-per-analyz-chart.component';
+import { StructureTestsTypesChartAnalyzComponent } from './charts/structure-tests-by-types/structure-tests-by-types-chart.component';
+import { ForecastAnalyzComponent } from './charts/forecast/forecast-chart.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,10 @@ import { CharIncomePerAnalyzComponent } from './charts/income-per-analyz/income-
     CharPerFilialComponent,
     CharPopularAnalyzesComponent,
     CharPerAnalyzesComponent,
-    CharIncomePerAnalyzComponent
+    CharIncomePerAnalyzComponent,
+    StructureTestsTypesChartAnalyzComponent,
+    ForecastAnalyzComponent
+
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -41,7 +46,8 @@ import { CharIncomePerAnalyzComponent } from './charts/income-per-analyz/income-
       { path: 'popular-analyzes-chart', component: CharPopularAnalyzesComponent },
       { path: 'per-analyzes-chart', component: CharPerAnalyzesComponent },
       { path: 'income-per-analyz', component: CharIncomePerAnalyzComponent },
-      
+      { path: 'structure-tests-by-types', component: StructureTestsTypesChartAnalyzComponent },
+      { path: 'forecast-chart', component: ForecastAnalyzComponent },
       
       
     ])

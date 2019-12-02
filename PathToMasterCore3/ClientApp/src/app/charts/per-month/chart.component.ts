@@ -11,7 +11,7 @@ export class CharPerMonthComponent implements OnInit {
 			animationEnabled: true,
 			exportEnabled: true,
 			title: {
-				text: "Кількість послуг за місяць середне арефметичне"
+				text: "Кількість послуг за місяць"
 			},
 			data: [{
 				type: "column",
