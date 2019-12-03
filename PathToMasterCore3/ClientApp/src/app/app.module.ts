@@ -16,6 +16,7 @@ import { CharPerAnalyzesComponent } from './charts/per-analyz/per-analyz-chart.c
 import { CharIncomePerAnalyzComponent } from './charts/income-per-analyz/income-per-analyz-chart.component';
 import { StructureTestsTypesChartAnalyzComponent } from './charts/structure-tests-by-types/structure-tests-by-types-chart.component';
 import { ForecastAnalyzComponent } from './charts/forecast/forecast-chart.component';
+import { ImportFileComponent } from './import-file/import-file.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ForecastAnalyzComponent } from './charts/forecast/forecast-chart.compon
     CharPerAnalyzesComponent,
     CharIncomePerAnalyzComponent,
     StructureTestsTypesChartAnalyzComponent,
-    ForecastAnalyzComponent
+    ForecastAnalyzComponent,
+    ImportFileComponent
 
   ],
   imports: [
@@ -48,6 +50,7 @@ import { ForecastAnalyzComponent } from './charts/forecast/forecast-chart.compon
       { path: 'income-per-analyz', component: CharIncomePerAnalyzComponent },
       { path: 'structure-tests-by-types', component: StructureTestsTypesChartAnalyzComponent },
       { path: 'forecast-chart', component: ForecastAnalyzComponent },
+      { path: 'import-file', component: ImportFileComponent },
       
       
     ])
